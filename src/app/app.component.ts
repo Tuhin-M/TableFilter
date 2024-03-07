@@ -5,13 +5,13 @@ import { MatTableDataSource } from '@angular/material/table';
 import { TableService } from './table.service';
 
 export interface UserData {
+  avatar_url: string;
   id: number;
   login: string;
   node_id: string;
   repos_url: string;
   events_url: string;
   received_events_url: string;
-  avatar_url: string;
 }
 
 @Component({
@@ -20,11 +20,11 @@ export interface UserData {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  displayedColumns: string[] = ['id', 'login', 'node_id',
+  displayedColumns: string[] = [
+    'id', 'avatar_url', 'login', 'node_id',
     'repos_url',
     'events_url',
-    'received_events_url',
-    'avatar_url'];
+    'received_events_url'];
   dataSource!: MatTableDataSource<UserData>;
   posts: any;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -52,12 +52,12 @@ export class AppComponent {
 function createNewUser(id: number): UserData {
 
   return {
+    avatar_url: 'avatar_url',
     id: id,
     login: 'login',
     node_id: 'node_id',
     repos_url: 'repos_url',
     events_url: 'events_url',
     received_events_url: 'received_events_url',
-    avatar_url: 'avatar_url'
   };
 }

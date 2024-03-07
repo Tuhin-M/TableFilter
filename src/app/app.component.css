@@ -1,11 +1,13 @@
+.parent{
+width: 100%;
+}
 .searchbar{
-  display: flex;
   align-items: right;
   justify-content: right;
 }
 .avatar{
-  height: 12vh;
-  width: 2.5vw;
+  height: 6vh;
+  width: 3vw;
   border-radius: 50%;
 }
 
@@ -36,7 +38,7 @@
 /* Table styles */
 /* ---------------------------------------------------------- */
 .mat-table {
-  width: 100%;
+  width: 80%;
 }
 
 .float-right {
@@ -49,9 +51,11 @@
 .mat-header-cell {
   background-color: #393939;
   color: white;
+  min-width: 3vw;
+  text-align: center;
 }
 .mat-header-cell:not(:first-child) {
-  padding-left: 0;
+  padding-left: 10px;
 }
 
 /* Style just the text in the header */
